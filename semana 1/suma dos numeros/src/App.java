@@ -10,7 +10,4 @@ import java.util.Scanner;
         System.out.printf("La suma de ambos números es: %d\n", num1 + num2);
         sc.close();
     }
-}
-
-// nuevo proyecto
-// --- IGNORE ---  
+} 
