@@ -3,3 +3,5 @@ public class App {
         System.out.println("Hello, World!");
     }
 }
+
+//Path lo sabe la terminal, para ejecutar un jar se realiza java -jar archivo.jar
