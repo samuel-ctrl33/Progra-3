@@ -12,6 +12,10 @@ public class App {
         int edad = anio - Integer.parseInt(fechaNacimiento.split("/")[2]);
         System.out.println("Tu edad es " + edad + " años.");
         scanner.close();
-
     }   
 }
+
+//tipo de dato minuscula, primitivo
+//clase mayuscula, referencia
+//sout
+//serr

@@ -6,9 +6,16 @@
     "configurations": [
         {
             "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "Progra-3_2a8c4fd4"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
-            "mainClass": "${file}",
+            "mainClass": "${file}"
         },
         {
             "type": "java",
