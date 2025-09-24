@@ -12,11 +12,12 @@ public class App {
             String fechaNacimiento = console.readLine(); //Clases envolotorios
             int anioNacimiento = Integer.parseInt(fechaNacimiento.split("/")[2]);
 
-            System.out.print("Introduzca tu fecha de nacimiento (yyyy):");
+            System.out.print("Introduzca el año actual (yyyy):");
             String anioActual = console.readLine(); //Clases envolotorios
-            int anioActualInt = Integer.parseInt(anioActual.split("/")[2]);
+            int anioActualInt = Integer.valueOf(anioActual);            
 
-            int edad = anioActualInt - Integer.valueOf(fechaNacimiento.split("/")[2]);
+            int edad = anioActualInt - anioNacimiento;
+            //int edad =anioActualInt - Integer.valueOf(fechaNacimiento.split("/")[2]); tambien es válida
             System.out.println("Tu edad es " + edad + " años.");
         }
 
