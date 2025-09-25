@@ -1,28 +1,25 @@
-import biblioteca.*;
+import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) throws Exception {
-        int n = 0;
-                
-         // Solicitar N hasta que sea válido (>0)
-        do {
-            n = ES.leerEntero("Introduce un número entero mayor que cero: ");
-            if (n <= 0) {
-                System.err.println("Error: El número debe ser mayor que cero.");
-            }
-        } while (n <= 0);
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        double suma = 0;
-        // Solicitar N números reales
-        for (int i = 1; i <= n; i++) {
-            double num = ES.leerReal("Introduce el número " + i + ": ");
-            suma += num;
-        }
+        System.out.print("Introduce tu edad: ");
+        int edad = sc.nextInt(); // no consume el salto de línea
 
-        double media = suma / n;
-        ES.escribir("La media aritmética es: " + media);
+        System.out.print("Introduce tu nombre: ");
+        String nombre = sc.nextLine(); // se come el salto y devuelve ""
 
+        //sc.nextLine(); // limpiar el salto de línea pendiente
+        //System.out.print("Introduce tu nombre: ");
+        //String nombre = sc.nextLine();
 
-        
+        System.out.println("Edad: " + edad + ", Nombre: " + nombre);
+
+        sc.close();
     }
 }
+
+//el sc.nextLine es para string y el sc.nextInt es para enteros
+//Cuando usas nextInt(), el ENTER que pulsas después del número queda pendiente en el buffer.
+//Si después llamas a nextLine(), este leerá directamente ese ENTER en lugar de esperar un texto.
