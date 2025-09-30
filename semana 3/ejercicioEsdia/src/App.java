@@ -5,10 +5,23 @@ public class App {
 
         Person personita1 = new Person();
         Person personita2 = new Person("Paco", 86.3f , 1.70f);
+
+        showPersonInfo(personita1);
+
+        
+            
+        extracted(personita1);
+        
         
 
-        double a = Esdia.readDouble("Dame un double ");
-        double b = Esdia.readDouble("Dame un double ");
-        System.out.printf("La suma de %f y %f es %f\n", a, b, a + b);
+    }
+
+    private static void showPersonInfo(Person personita1) {
+        throw new UnsupportedOperationException("Unimplemented method 'showPersonInfo'");
+    }
+
+    private static void extracted(Person personita1) {
+        System.out.println("INFORMACIÓN DE LA PERSONA");
+        System.out.printf("La persona se llama %s, mide %.2f y pesa %.2f\n", personita1.getName(),personita1.getHeightInMeters(),personita1.getWeightInKg());
     }
 }
