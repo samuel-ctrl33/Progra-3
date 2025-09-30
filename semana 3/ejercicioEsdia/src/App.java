@@ -2,7 +2,10 @@ import com.coti.tools.Esdia;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+
+        Person personita1 = new Person();
+        Person personita2 = new Person("Paco", 86.3f , 1.70f);
+        
 
         double a = Esdia.readDouble("Dame un double ");
         double b = Esdia.readDouble("Dame un double ");
