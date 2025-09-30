@@ -25,3 +25,5 @@ public class App {
         System.out.printf("La persona se llama %s, mide %.2f y pesa %.2f\n", personita1.getName(),personita1.getHeightInMeters(),personita1.getWeightInKg());
     }
 }
+
+//this se utiliza para referirse a los atributos de la clase
