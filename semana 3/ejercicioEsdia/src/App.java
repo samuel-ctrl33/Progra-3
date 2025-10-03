@@ -7,12 +7,9 @@ public class App {
         Person personita2 = new Person("Paco", 86.3f , 1.70f);
 
         showPersonInfo(personita1);
-
-        
-            
         extracted(personita1);
-        
-        
+        showPersonInfo(personita2);
+        extracted(personita2);
 
     }
 
