@@ -1,0 +1,42 @@
+
+public class persona{
+    //Aqui van atriqibutos, constructores, metodos
+
+    private String nombre;
+    private int edad;
+    private double altura;
+
+    private String ciudad = "Madrid"; //Se pueden inicializar directamente
+
+    //Existe un constructor por defecto que no hace nada
+
+}
+
+Getters
+
+Qué son: métodos que devuelven el valor de un atributo privado.
+
+Para qué sirven: acceder a los datos del objeto de forma controlada.
+
+Setters
+
+Qué son: métodos que permiten modificar un atributo privado.
+
+Para qué sirven: cambiar valores de forma controlada (a veces con validación).
+
+Constructores
+
+Qué son: métodos especiales que se llaman al crear un objeto (new).
+
+Para qué sirven: inicializar los atributos del objeto.
+
+Métodos
+
+Qué son: funciones dentro de la clase.
+
+Para qué sirven: dar comportamiento al objeto (acciones que puede hacer).
+
+Getters → leer atributos.
+Setters → modificar atributos.
+Constructores → crear objetos con valores.
+Métodos → comportamientos/acciones de la clase.
