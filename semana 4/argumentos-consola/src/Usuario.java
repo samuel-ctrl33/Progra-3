@@ -4,7 +4,7 @@ public class Usuario {
     private float peso;
     private float altura;
 
-
+    //Constructor qu epermite crear un objeto Usuario
     public Usuario(String nombre, float peso, float altura) {
         this.nombre = nombre;
         this.peso = peso;
@@ -38,11 +38,11 @@ public class Usuario {
         
     }
 
+    //metodo instancia ya que se necesita rellenar datos
     public float obtenerIMC() {
         return peso / (altura * altura);
     }
 
-    //metodo instancia ya que se necesita rellenar datos
 
     /**
      * Metodo que devuelve los datos del usuario en formato CSV
@@ -62,6 +62,7 @@ public class Usuario {
         return  String.format("|%10s||%10s||%10s||%10s|", "nombre", "peso", "altura", "IMC");
     }
 
+    
     public String getNombre() {
         return nombre;
     }
@@ -83,8 +84,4 @@ public class Usuario {
     public int getAltura() {
         return (int) altura;
     }
-
-    
-
-
 }
