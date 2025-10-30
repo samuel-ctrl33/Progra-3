@@ -1,30 +1,28 @@
 package model;
 
-import java.awt.geom.CubicCurve2D;
 import java.util.ArrayList;
 
-public class concesionario{
+public class concesionario {
 
-private ArrayList coches = new ArrayList<>();
+    private ArrayList<Coche> coches = new ArrayList<>();
 
-public concesionario() {
+    public concesionario() {
 
-coches = new ArrayList<>();
+        coches = new ArrayList<>();
 
+    }
+
+    public ArrayList<Coche> getCoches() {
+        return coches;
+    }
+
+    public void setCoches(ArrayList<Coche> coches) {
+        this.coches = coches;
+    }
+
+    // CRUD
+
+    public void addCoche(Coche c) {
+        coches.add(c);
+    }
 }
-
-public ArrayList getCoches() {
-return coches;
-}
-
-public void setCoches(ArrayList coches) {
-this.coches = coches;
-}
-
-//CRUD
-
-public void addCoche(Coche c) {
-coches.add(c);
-}
-}
-
