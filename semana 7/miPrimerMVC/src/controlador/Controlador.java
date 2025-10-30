@@ -36,7 +36,7 @@ public class Controlador {
     }
 
     public ArrayList<Coche> obtenerTodosLosCoches(){
-        return model.getCoches;
+        return modelo.getCoches();
     }
 
 }

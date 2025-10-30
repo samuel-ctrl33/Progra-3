@@ -53,9 +53,9 @@ public class Vista {
 
     private void agregarCoche(){
 
-        String marca= Esdia.readString("Marca:"):
-        String modelo= Esdia.readString("Modelo:"):
-        String numBastidor= Esdia.readString("Número de Bastidor:"):
+        String marca= Esdia.readString("Marca:");
+        String modelo= Esdia.readString("Modelo:");
+        String numBastidor= Esdia.readString("Número de Bastidor:");
 
         Coche coche = new Coche(marca,modelo,numBastidor);
 
@@ -82,6 +82,14 @@ public class Vista {
             }
 
         }
+
+    }
+
+    public void getCoches(){
+
+    }
+
+    public void borrarCoche(){
 
     }
 }

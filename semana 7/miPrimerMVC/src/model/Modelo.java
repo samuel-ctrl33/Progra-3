@@ -24,6 +24,10 @@ public class Modelo {
         return "";
     }
 
+    public ArrayList<Coche> getCoches(){
+        return coches;
+    }
+
     
 
 }
