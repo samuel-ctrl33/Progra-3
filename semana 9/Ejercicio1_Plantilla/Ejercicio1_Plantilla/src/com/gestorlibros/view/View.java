@@ -1,5 +1,8 @@
 package com.gestorlibros.view;
 
+import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 import com.coti.tools.DiaUtil;
@@ -77,43 +80,48 @@ public class View {
     }
 
     private void importBooksFromCSV() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'importBooksFromCSV'");
+    
     }
 
     private void importarBooksXML() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'importarBooksXML'");
+        
     }
 
     private void importarBooksJSON() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'importarBooksJSON'");
+        int resultado = c.importBooksFromJSON();
+        if(resultado==0){
+            System.out.println("Importado correctamente json");
+        }else{
+            System.out.println("Ha habido un problema en la importacion");
+        }
+    
     }
 
     private void exportBooksToXML() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'exportBooksToXML'");
+    
     }
 
+
     private void exportarBooksJSON() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'exportarBooksJSON'");
+        int resultado = c.exportBooksToJSON();
+        if(resultado==0){
+            System.out.println("Exportado correctamente json");
+        }else{
+            System.out.println("Ha habido un problema en la exportación");
+        }
     }
 
     private void exportarBooksCSV() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'exportarBooksCSV'");
+        
+
     }
 
     private void editarLibroDelModelo() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'editarLibroDelModelo'");
+    
     }
 
     private void borrarLibroDelModelo() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'borrarLibroDelModelo'");
+    
     }
 
     private void anadirLibroAlModelo() {
