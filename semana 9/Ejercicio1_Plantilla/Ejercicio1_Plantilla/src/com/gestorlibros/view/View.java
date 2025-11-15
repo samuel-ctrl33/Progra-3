@@ -80,11 +80,21 @@ public class View {
     }
 
     private void importBooksFromCSV() {
-    
+        int resultado = c.importBooksFromCSV();
+        if(resultado==0){
+            System.out.println("Importado correctamente CSV");
+        }else{
+            System.out.println("Ha habido un problema en la importacion CSV");
+        }
     }
 
     private void importarBooksXML() {
-        
+        int resultado = c.importBooksFromXML();
+        if(resultado==0){
+            System.out.println("Importado correctamente XML");
+        }else{
+            System.out.println("Ha habido un problema en la importacion XML");
+        }
     }
 
     private void importarBooksJSON() {
@@ -98,7 +108,12 @@ public class View {
     }
 
     private void exportBooksToXML() {
-    
+        int resultado = c.exportBooksToXML();
+        if(resultado==0){
+            System.out.println("Exportado correctamente XML");
+        }else{
+            System.out.println("Ha habido un problema en la exportación XML");
+        }
     }
 
 
@@ -107,21 +122,74 @@ public class View {
         if(resultado==0){
             System.out.println("Exportado correctamente json");
         }else{
-            System.out.println("Ha habido un problema en la exportación");
+            System.out.println("Ha habido un problema en la exportación a JSON.");
         }
     }
 
     private void exportarBooksCSV() {
-        
-
+        int resultado = c.exportBooksToCSV(); 
+    
+        if (resultado == 0) {
+        System.out.println("Exportado correctamente a CSV.");
+         } else {
+        System.out.println("Ha habido un problema en la exportación a CSV.");
+        }
     }
 
+
     private void editarLibroDelModelo() {
-    
+        // Mostrar libros disponibles para editar
+        ArrayList<Libro> books = c.getLibros();
+        if(books.size() == 0){
+            System.out.println("No hay libros disponibles para editar.");
+            return;
+        }
+        mostrarLibrosModelo(true);
+        
+        // Pedir índice del libro a editar
+        int indice = Esdia.readInt("Seleccione el índice del libro a editar: ", 1, books.size());
+        Libro libroAEditar = books.get(indice - 1);
+        
+        // Pedir nuevos datos
+        System.out.println("Introduzca los nuevos datos (deje en blanco para no cambiar):");
+        String nuevoTitulo = Esdia.readString("Nuevo título ["+libroAEditar.getTitulo()+ "]: ");
+        if(!nuevoTitulo.isEmpty()) libroAEditar.setTitulo(nuevoTitulo);
+        
+        String nuevoAutor = Esdia.readString("Nuevo autor ["+libroAEditar.getAutor()+ "]: ");
+        if(!nuevoAutor.isEmpty()) libroAEditar.setAutor(nuevoAutor);
+        
+        String nuevoISBN = Esdia.readString("Nuevo ISBN ["+libroAEditar.getISBN()+ "]: ");
+        if(!nuevoISBN.isEmpty()) libroAEditar.setISBN(nuevoISBN);
+        
+        String nuevoEditorial = Esdia.readString("Nuevo editorial ["+libroAEditar.getEditorial()+ "]: ");
+        if(!nuevoEditorial.isEmpty()) libroAEditar.setEditorial(nuevoEditorial);
+        
+        // Actualizar el libro
+        c.updateLibro(libroAEditar);
+        System.out.println("Libro actualizado correctamente.");
     }
 
     private void borrarLibroDelModelo() {
-    
+        // Mostrar libros disponibles para borrar
+        ArrayList<Libro> books = c.getLibros();
+        if(books.size() == 0){
+            System.out.println("No hay libros disponibles para borrar.");
+            return;
+        }
+        mostrarLibrosModelo(true);
+        
+        // Pedir índice del libro a borrar
+        int indice = Esdia.readInt("Seleccione el índice del libro a borrar: ", 1, books.size());
+        Libro libroABorrar = books.get(indice - 1);
+        
+        // Confirmar borrado
+        String confirmar = Esdia.readString("¿Está seguro de que desea borrar el libro? (s/n): ");
+        if(confirmar.equalsIgnoreCase("s")){
+            c.removeLibro(libroABorrar);
+            System.out.println("Libro eliminado correctamente.");
+        }else{
+            System.out.println("Operación cancelada.");
+        }
     }
 
     private void anadirLibroAlModelo() {

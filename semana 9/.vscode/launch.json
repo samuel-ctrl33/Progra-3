@@ -1,0 +1,19 @@
+{
+  // Configuración para ejecutar la aplicación con la terminal integrada
+  // Permite entrada interactiva (stdin) y añade los jars de lib al classpath
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Run GestorLibros (integratedTerminal)",
+      "request": "launch",
+      "mainClass": "com.gestorlibros.App",
+      "projectName": "",
+      "classPaths": [
+        "${workspaceFolder}/Ejercicio1_Plantilla/Ejercicio1_Plantilla/bin",
+        "${workspaceFolder}/Ejercicio1_Plantilla/Ejercicio1_Plantilla/lib/*"
+      ],
+      "console": "integratedTerminal"
+    }
+  ]
+}
