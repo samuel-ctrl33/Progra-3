@@ -19,6 +19,8 @@ public class Vista {
         this.controlador=controlador;
     }
 
+    //se crea el getter y setter para conectarse con el controlador
+
     public void mostrarMenu(){
         boolean continuar = true;
 

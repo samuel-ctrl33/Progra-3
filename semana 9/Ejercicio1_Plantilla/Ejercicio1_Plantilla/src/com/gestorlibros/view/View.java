@@ -240,6 +240,10 @@ public class View {
         }
     }
 
+    public Controller getC() {
+    return c;
+    }
+
     public void setC(Controller c) {
         this.c = c;
     }
