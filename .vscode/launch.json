@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Ejercicio2",
+            "request": "launch",
+            "mainClass": "Ejercicio2",
+            "projectName": "Progra-3_62f83cb0"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio2B",
+            "request": "launch",
+            "mainClass": "Ejercicio2B",
+            "projectName": "Progra-3_62f83cb0"
+        },
+        {
+            "type": "java",
             "name": "Ejercicio2B",
             "request": "launch",
             "mainClass": "Ejercicio2B",

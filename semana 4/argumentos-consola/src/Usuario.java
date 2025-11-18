@@ -4,7 +4,7 @@ public class Usuario {
     private float peso;
     private float altura;
 
-    //Constructor qu epermite crear un objeto Usuario
+    //Constructor que permite crear un objeto Usuario
     public Usuario(String nombre, float peso, float altura) {
         this.nombre = nombre;
         this.peso = peso;
@@ -31,6 +31,7 @@ public class Usuario {
         float altura = Float.parseFloat(datos[2]);
 
         return new Usuario(nombre, peso, altura);
+
         } catch(NumberFormatException e) {
             System.out.println("Error: Peso y Altura deben ser numeros validos");
             return null;

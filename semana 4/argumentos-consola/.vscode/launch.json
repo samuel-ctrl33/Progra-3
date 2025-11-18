@@ -22,13 +22,7 @@
         ,
         {
             "type": "java",
-            "name": "Ejercicio2",
-            "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "Ejercicio22",
+            "name": "Ejercicio2 (con args)",
             "request": "launch",
             "mainClass": "Ejercicio2",
             "args": "Alvaro 90 1.77"
