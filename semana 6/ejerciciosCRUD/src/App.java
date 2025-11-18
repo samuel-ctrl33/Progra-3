@@ -1,7 +1,4 @@
-import static com.coti.tools.Esdia.*;
-
-import java.util.ArrayList;
-
+import static com.coti.tools.Esdia;
 import model.Coche;
 import model.concesionario;
 
@@ -11,8 +8,7 @@ import model.concesionario;
 public class App {
     public static void main(String[] args) throws Exception {
 
-        concesionario concesionario = new concesionario();
-        Coche coches = coches(modelo, matricula);
+        concesionario Concesionario = new concesionario();
 
         int opcion;
         do {
@@ -26,7 +22,7 @@ public class App {
 
             switch (opcion) {
                 case 1:
-                    agregarCoche();
+                    agregarCoche(null);
                     break;
                 case 2:
                     eliminarCoche();
@@ -46,22 +42,18 @@ public class App {
         } while (opcion != 5);
     }
 
-
-
 public static void agregarCoche(Concesionario c) {
 String matricula = Esdia.readString("Ingrese la matricula del coche: ");
 String modelo = Esdia.readString("Ingrese el modelo del coche: ");
-coches.add(new Coche(matricula, modelo));
+coche.add(new Coche(matricula, modelo));
 
-c concesionario.agregarCoche(new Coche(matricula, modelo));
+c concesionario.addCoche(new Coche(matricula, modelo));
 
 }
 
+    public static void eliminarCoche() {
 
-
-public static void eliminarCoche() {
-
-    String matricula = Esdia.readString("Ingrese la matricula del coche a eliminar: ");
+        String matricula = Esdia.readString("Ingrese la matricula del coche a eliminar: ");
         Coche cocheAEliminar = null;
 
         for (Coche coche : coches) {
@@ -78,54 +70,46 @@ public static void eliminarCoche() {
         }
     }
 
-public static void modificarCoche() {
+    public static void modificarCoche() {
 
-    String matricula = Esdia.readString("Ingrese la matricula a modificar: ");
-    Coche cocheAModificar = null;
-    for (Coche coche : coche) {
-        if (coche.getMatricula().equals(matricula)) {
-            cocheAModificar = coche;
-            break;
+        String matricula = Esdia.readString("Ingrese la matricula a modificar: ");
+        Coche cocheAModificar = null;
+        for (Coche coche : coche) {
+            if (coche.getMatricula().equals(matricula)) {
+                cocheAModificar = coche;
+                break;
+            }
+        }
+        if (cocheAModificar != null) {
+            String nuevoMatricula = Esdia.readString("Ingrese la nueva matricula: ");
+            int nuevaModelo = Esdia.readInt("Ingrese el nuevo modelo: ");
+
+            cocheAModificar.setMatricula(nuevaMatricula);
+            cocheAModificar.setModelo(nuevoModelo);
+        } else {
+            System.out.println("Coche no encontrado.");
         }
     }
-    if (cocheAModificar != null) {
-        String nuevoMatricula = Esdia.readString("Ingrese la nueva matricula: ");
-        int nuevaModelo = Esdia.readInt("Ingrese el nuevo modelo: ");
 
-        cocheAModificar.setMatricula(nuevaMatricula);
-        cocheAModificar.setModelo(nuevoModelo);
-    } else {
-        System.out.println("Coche no encontrado.");
+    public static void listarCoches(concesionario c) {
+
+        ArrayList coche = c.getCoches();
+        if (coche.isEmpty()) {
+            System.out.println("No hay personas en la lista.");
+            return;
+        }
+
+        for (Coche coche : coche) {
+            System.out.println(coche.comoFilaDeTabla());
+        }
     }
-}
-
-public static void listarCoches(concesionario c) {
-    ArrayList<Coche> coche = c.getCoches();
-    if (coche.isEmpty()) {
-        System.out.println("No hay personas en la lista.");
-        return;
-    }
-
-    for (Coche c : coche) {
-        System.out.println(coche.comoFilaDeTabla());
-    }
-}
-public static void listarCoches() {
-    throw new UnsupportedOperationException("Unimplemented method 'listarCoches'");
-}
-
-public static void agregarCoche() {
-    throw new UnsupportedOperationException("Unimplemented method 'agregarCoche'");
-}
-    private String matricula;
-    private String modelo;
 
     public String getMatricula() {
-        return getMatricula();
+        return matricula;
     }
 
     public String getModelo() {
-        return getModelo();
+        return modelo;
     }
 
     public void setMatricula(String matricula) {

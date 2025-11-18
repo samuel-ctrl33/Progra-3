@@ -71,18 +71,20 @@ public class Usuario {
         this.nombre = nombre;
     }
 
+    public float getPeso() {
+        return peso;
+    }
+
     public void setPeso(float peso) {
         this.peso = peso;
+    }
+
+    public int getAltura() {
+        return (int) altura;
     }
 
     public void setAltura(int altura) {
         this.altura = altura;
     }
 
-    public float getPeso() {
-        return peso;
-    }
-    public int getAltura() {
-        return (int) altura;
-    }
 }

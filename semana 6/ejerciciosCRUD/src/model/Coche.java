@@ -1,8 +1,8 @@
 package model;
 
 public class Coche {
-    private String matricula;
-    private String modelo;
+    String matricula;
+    String modelo;
 
     public Coche(String matricula, String modelo) {
         this.matricula = matricula;

@@ -1,7 +1,7 @@
 public class Ejercicio2B {
     public static void main(String[] args) {
         Usuario[] usuarios = new Usuario[3]; //array de 3 usuarios  
-        usuarios[0] = Usuario.crearUsuario(new String[]{"Kaká", "40", "1.80"}); //array con 3 datos
+        usuarios[0] = Usuario.crearUsuario(new String[]{"Kaká", "40", "1.80"}); //array con los 3 datos
         usuarios[1] = Usuario.crearUsuario(new String[]{"Eusebio", "65", "1.78"});
         usuarios[2] = Usuario.crearUsuario(new String[]{"Luis", "5", "1.5"});
 

@@ -38,8 +38,4 @@ public class Coche {
     public void setNumBastidor(String numBastidor) {
         this.numBastidor = numBastidor;
     }
-
-    
-    
-    
 }

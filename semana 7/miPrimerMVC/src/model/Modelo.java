@@ -1,7 +1,6 @@
 package model;
 
 import java.util.ArrayList;
-import controlador.Controlador;
 
 public class Modelo {
     
@@ -21,14 +20,19 @@ public class Modelo {
         }
 
         coches.add(coche);
-        return "";
+        return "Añadido correctamente";
     }
 
     public ArrayList<Coche> getCoches(){
         return coches;
     }
 
-    
-
+    public String eliminarCoche(Coche coche) {
+        if (coches.remove(coche)) { //aqui es donde se elimina realmente
+            return "Coche eliminado correctamente";
+        } else {
+            return "El coche no existe en la lista";
+        }
+    }
 }
 

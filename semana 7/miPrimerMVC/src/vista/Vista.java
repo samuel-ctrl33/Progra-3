@@ -1,16 +1,17 @@
 package vista;
 
+import com.coti.tools.Esdia;
 import java.util.ArrayList;
 import controlador.Controlador;
 import model.Coche;
 
-import com.coti.tools.Esdia;
+
 
 public class Vista {
 
     Controlador controlador;
 
-    public Controlador geControlador(){
+    public Controlador getControlador(){
         return controlador;
     }
 
@@ -22,10 +23,11 @@ public class Vista {
         boolean continuar = true;
 
         while(continuar){
-            System.out.println("Menu Mvc");
-            System.out.println("Agregar coche");
-            System.out.println("Listar coches");
-            System.out.println("Borrar");
+            System.out.println("\n--- MENU MVC ---");
+            System.out.println("1. Agregar coche");
+            System.out.println("2. Listar coches");
+            System.out.println("3. Borrar coche");
+            System.out.println("4. Salir");
 
             int opcion =Esdia.readInt("Introduzca una opcion");
 
@@ -38,14 +40,14 @@ public class Vista {
                     listarCoche();
                     break;
                 case 3:
+                    borrarCoche();
+                    break;
+                case 4:
                     System.out.println("Gracias por usar la aplicacion");
                     continuar = false;
                     break;
-                case 4:
-
-                
-
-
+                default:
+                    System.out.println("Opción no válida");
             }
 
         }
@@ -78,18 +80,31 @@ public class Vista {
             System.out.println(Coche.ObtenerCabeceroTabla());
 
             for(Coche c : coche){
-
+                System.out.println(c.comoFilaDeTabla());
             }
 
         }
 
     }
 
-    public void getCoches(){
-
-    }
-
     public void borrarCoche(){
-
+        String numBastidor = Esdia.readString("Introduzca el número de bastidor del coche a borrar: ");
+        
+        ArrayList<Coche> coches = controlador.obtenerTodosLosCoches();
+        Coche cocheBorrar = null;
+        
+        for(Coche c : coches){
+            if(c.getNumBastidor().equals(numBastidor)){
+                cocheBorrar = c;
+                break;
+            }
+        }
+        
+        if(cocheBorrar != null){
+            String resultado = controlador.eliminarCoche(cocheBorrar);
+            System.out.println(resultado);
+        }else{
+            System.err.println("Coche no encontrado");
+        }
     }
 }

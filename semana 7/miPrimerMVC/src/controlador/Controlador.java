@@ -39,4 +39,9 @@ public class Controlador {
         return modelo.getCoches();
     }
 
+    public String eliminarCoche(Coche coche){
+        String resultado = modelo.eliminarCoche(coche);
+        return resultado;
+    }
+
 }
