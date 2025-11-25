@@ -51,7 +51,7 @@ public class App {
 
     public static void eliminarCoche(concesionario c) {
 
-        String matricula = Esdia.readString("Ingrese la matricula del coche a eliminar: ");
+        Coche matricula = Esdia.readString("Ingrese la matricula del coche a eliminar: ");
         Coche cocheAEliminar = null;
 
         for (Coche coche : c.getCoches()) {
