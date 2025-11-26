@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "Progra-3-2_d27604f3"
+        },
+        {
+            "type": "java",
             "name": "EjemploHerencia",
             "request": "launch",
             "mainClass": "ejemploherencia.EjemploHerencia",

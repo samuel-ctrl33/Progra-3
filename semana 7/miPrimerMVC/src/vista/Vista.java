@@ -11,16 +11,6 @@ public class Vista {
 
     Controlador controlador;
 
-    public Controlador getControlador(){
-        return controlador;
-    }
-
-    public void setControlador(Controlador controlador){
-        this.controlador=controlador;
-    }
-
-    //se crea el getter y setter para conectarse con el controlador
-
     public void mostrarMenu(){
         boolean continuar = true;
 
@@ -31,7 +21,7 @@ public class Vista {
             System.out.println("3. Borrar coche");
             System.out.println("4. Salir");
 
-            int opcion =Esdia.readInt("Introduzca una opcion");
+            int opcion = Esdia.readInt("Introduzca una opcion");
 
             switch(opcion){
                 case 1:
@@ -108,5 +98,14 @@ public class Vista {
         }else{
             System.err.println("Coche no encontrado");
         }
+    }
+
+    //se crea el getter y setter para conectarse con el controlador
+     public Controlador getControlador(){
+        return controlador;
+    }
+
+    public void setControlador(Controlador controlador){
+        this.controlador=controlador;
     }
 }
