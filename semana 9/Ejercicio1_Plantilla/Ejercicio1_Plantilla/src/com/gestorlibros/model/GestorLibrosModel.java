@@ -114,6 +114,7 @@ public class GestorLibrosModel {
         String json = new String(Files.readAllBytes(pathToJSON), StandardCharsets.UTF_8);
         // Obtiene el tipo de la lista
         Type tipoDeLista = new TypeToken<ArrayList<Libro>>(){}.getType();
+        //Convertir objetos Json a Java
         ArrayList<Libro> libros = gson.fromJson(json, tipoDeLista);
 
         //this.libros = libros;
